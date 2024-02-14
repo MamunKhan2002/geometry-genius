@@ -62,16 +62,16 @@
                         <h2 class="card-title">Rectangle</h2>
                         <p>Area (A) = l x w</p>
                         <div class="flex gap-2 items-center justify-center">
-                            <input class="bg-[#f1f1f1] max-w-[95px] h-[38px] pl-[5px] rounded-md" type="text"
-                                placeholder="Length"><span>cm</span>
-                            <input class="bg-[#f1f1f1] max-w-[95px] h-[38px] pl-[5px] rounded-md" type="text"
-                                placeholder="Width"><span>cm</span>
+                            <input id="rectangle-length" class="bg-[#f1f1f1] max-w-[95px] h-[38px] pl-[5px] rounded-md"
+                                type="text" placeholder="Length"><span>cm</span>
+                            <input id="rectangle-Width" class="bg-[#f1f1f1] max-w-[95px] h-[38px] pl-[5px] rounded-md"
+                                type="text" placeholder="Width"><span>cm</span>
                         </div>
                         <div>
-                            <span class="text-base">Result: area = <span></span>cm <sup>2</sup> </span>
+                            <span class="text-base">Result: area = <span id="rectangle-area"></span>cm <sup>2</sup> </span>
                         </div>
                     </div>
-                    <button
+                    <button onclick="calculateRectangleArea()"
                         class="btn btn-primary max-w-full mx-[44px] mb-[50px] bg-[#1090d8] border-[#1090d8] text-white">Calculate</button>
                 </div>
             </div>
@@ -85,17 +85,17 @@
                         <h2 class="card-title">Parallelogram</h2>
                         <p>Area (A) = b x h</p>
                         <div class="flex gap-2 items-center justify-center">
-                            <input class="bg-[#f1f1f1] max-w-[95px] h-[38px] pl-[5px] rounded-md" type="text"
+                            <input id="Parallelogram-base" class="bg-[#f1f1f1] max-w-[95px] h-[38px] pl-[5px] rounded-md" type="text"
                                 placeholder="base"><span>cm</span>
-                            <input class="bg-[#f1f1f1] max-w-[95px] h-[38px] pl-[5px] rounded-md" type="text"
+                            <input id="Parallelogram-height" class="bg-[#f1f1f1] max-w-[95px] h-[38px] pl-[5px] rounded-md" type="text"
                                 placeholder="height"><span>cm</span>
                         </div>
                         <div>
-                            <span class="text-base">Result: area =<span></span>cm <sup>2</sup> </span>
+                            <span class="text-base">Result: area = <span id="display-Parallelogram-area"></span>cm <sup>2</sup> </span>
                         </div>
                     </div>
                     <button
-                        class="btn btn-primary max-w-full mx-[44px] mb-[50px] bg-[#1090d8] border-[#1090d8] text-white">Calculate</button>
+                       onclick="calculateParallelogramArea()" class="btn btn-primary max-w-full mx-[44px] mb-[50px] bg-[#1090d8] border-[#1090d8] text-white">Calculate</button>
                 </div>
             </div>
             <!-- calculation Rhombus  -->
@@ -171,13 +171,15 @@
         <!-- Area Calculation result here-->
         <div class="p-[30px] max-w-lg h-[455px] text-center border-solid border-2 border-[#e0e0e2] rounded-lg flex-1">
             <h3 class="text-xl font-bold underline">Area Calculation</h3>
-            <h1 class="text-xl">⇨ Triangle A = <span id="triangle-area"></span> cm <sup>2</sup> </h1>
+            <h1 class="text-xl"> <span class="text-2xl">⇨</span> Triangle A = <span id="triangle-area"></span> cm
+                <sup>2</sup> </h1>
         </div>
     </main>
     <footer class="text-center mb-[5px]">
         <small>copyright &#169; 2024 Mamun Khan</small>
     </footer>
     <script src="./script.js"></script>
+    <script src="./advanched.js"></script>
 </body>
 
 </html>
