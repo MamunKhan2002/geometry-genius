@@ -38,16 +38,17 @@
                         <h2 class="card-title">Triangle</h2>
                         <p>Area (A) = 0.5 x b x h</p>
                         <div class="flex gap-2 items-center justify-center">
-                            <input class="bg-[#f1f1f1] max-w-[95px] h-[38px] pl-[5px] rounded-md" type="text"
-                                placeholder="base"><span>cm</span>
-                            <input class="bg-[#f1f1f1] max-w-[95px] h-[38px] pl-[5px] rounded-md" type="text"
-                                placeholder="height"><span>cm</span>
+                            <input id="input-base" class="bg-[#f1f1f1] max-w-[95px] h-[38px] pl-[5px] rounded-md"
+                                type="text" placeholder="base"><span>cm</span>
+                            <input id="input-height" class="bg-[#f1f1f1] max-w-[95px] h-[38px] pl-[5px] rounded-md"
+                                type="text" placeholder="height"><span>cm</span>
                         </div>
                         <div>
-                            <span class="text-base">Result: area =<span></span>cm <sup>2</sup> </span>
+                            <span class="text-base">Result: area = <span id="triangle-result"></span> cm <sup>2</sup>
+                            </span>
                         </div>
                     </div>
-                    <button
+                    <button onclick="calculateTriangleArea()"
                         class="btn btn-primary max-w-full mx-[44px] mb-[50px] bg-[#1090d8] border-[#1090d8] text-white">Calculate</button>
                 </div>
             </div>
@@ -105,12 +106,12 @@
                     </figure>
                     <div class="card-body items-center text-center">
                         <h2 class="card-title">Rhombus</h2>
-                        <p>Area (A) = b x h</p>
+                        <p>Area (A) = 0.5 x d <sub>1</sub> x d <sub>1</sub> </p>
                         <div class="flex gap-2 items-center justify-center">
                             <input class="bg-[#f1f1f1] max-w-[95px] h-[38px] pl-[5px] rounded-md" type="text"
-                                placeholder="base"><span>cm</span>
+                                placeholder="d1 = 16 "><span>cm</span>
                             <input class="bg-[#f1f1f1] max-w-[95px] h-[38px] pl-[5px] rounded-md" type="text"
-                                placeholder="height"><span>cm</span>
+                                placeholder="d2 = 8"><span>cm</span>
                         </div>
                         <div>
                             <span class="text-base">Result: area = <span></span>cm <sup>2</sup> </span>
@@ -128,12 +129,12 @@
                     </figure>
                     <div class="card-body items-center text-center">
                         <h2 class="card-title">Pentagon</h2>
-                        <p>Area (A) = b x h</p>
+                        <p>Area (A) = 0.5 x p x b</p>
                         <div class="flex gap-2 items-center justify-center">
                             <input class="bg-[#f1f1f1] max-w-[95px] h-[38px] pl-[5px] rounded-md" type="text"
-                                placeholder="base"><span>cm</span>
+                                placeholder="p = 6"><span>cm</span>
                             <input class="bg-[#f1f1f1] max-w-[95px] h-[38px] pl-[5px] rounded-md" type="text"
-                                placeholder="height"><span>cm</span>
+                                placeholder="b = 10"><span>cm</span>
                         </div>
                         <div>
                             <span class="text-base">Result: area = <span></span>cm <sup>2</sup> </span>
@@ -151,12 +152,12 @@
                     </figure>
                     <div class="card-body items-center text-center">
                         <h2 class="card-title">Ellipse</h2>
-                        <p>Area (A) = b x h</p>
+                        <p>Area (A) = πab</p>
                         <div class="flex gap-2 items-center justify-center">
                             <input class="bg-[#f1f1f1] max-w-[95px] h-[38px] pl-[5px] rounded-md" type="text"
-                                placeholder="base"><span>cm</span>
+                                placeholder="a = 10"><span>cm</span>
                             <input class="bg-[#f1f1f1] max-w-[95px] h-[38px] pl-[5px] rounded-md" type="text"
-                                placeholder="height"><span>cm</span>
+                                placeholder="b = 4"><span>cm</span>
                         </div>
                         <div>
                             <span class="text-base">Result: area = <span></span>cm <sup>2</sup> </span>
@@ -170,6 +171,7 @@
         <!-- Area Calculation result here-->
         <div class="p-[30px] max-w-lg h-[455px] text-center border-solid border-2 border-[#e0e0e2] rounded-lg flex-1">
             <h3 class="text-xl font-bold underline">Area Calculation</h3>
+            <h1 class="text-xl">⇨ Triangle A = <span id="triangle-area"></span> cm <sup>2</sup> </h1>
         </div>
     </main>
     <footer class="text-center mb-[5px]">
